@@ -1,9 +1,15 @@
 <script setup>
-import NavBar from 'NavBar.vue'
+import NavBar from '../components/NavBar.vue'
+import FooterNav from '../components/FooterNav.vue'
 </script>
 
 <template>
-  <main>
+  <header>
     <NavBar />
+  </header>
+  <main>
   </main>
+  <footer>
+    <FooterNav />
+  </footer>
 </template>
