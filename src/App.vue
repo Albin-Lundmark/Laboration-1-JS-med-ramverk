@@ -4,14 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <v-app>
-    <header>
-      <div class="wrapper">
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
-    </header>
+    <router-link to="/">Home</router-link>
     <RouterView />
   </v-app>
 </template>

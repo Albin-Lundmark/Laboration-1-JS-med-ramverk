@@ -13,3 +13,6 @@ import FooterNav from '../components/FooterNav.vue'
     <FooterNav />
   </footer>
 </template>
+
+<style scoped>
+</style>
