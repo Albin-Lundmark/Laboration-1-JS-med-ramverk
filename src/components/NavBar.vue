@@ -17,9 +17,10 @@
       </v-navigation-drawer>
       <v-main style="height: 250px">
         <div class="d-flex h-100">
-          <v-btn color="secondary" @click.stop="drawer = !drawer">
+          <v-btn id="menu-btn" color="blue" @click.stop="drawer = !drawer">
             Menu
           </v-btn>
+          <img class="hero" src="../assets/img/superhero-hero-image.jpg" alt="HeroImage">
         </div>
       </v-main>
     </v-layout>
@@ -37,4 +38,20 @@ export default {
 </script>
 
 <style scoped>
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#menu-btn{
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.hero {
+  position:relative;
+  height: auto;
+  width: 100vw;
+}
 </style>
