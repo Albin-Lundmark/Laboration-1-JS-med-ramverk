@@ -1,24 +1,21 @@
 <script>
 import { useHeroStore } from '../stores/heroStore'
-import { ref } from 'vue'
 
     export default {
         setup() {
-            const heroStore = useHeroStore()
-            /* onMounted(async () =>{
-              await heroStore.fetchData()
-              console.log(this.heroes)
-            }) */
-            heroStore.fetchData()
-            const filter = ref('all')
 
-            return { heroStore, filter }
+            const heroStore = useHeroStore()
+            heroStore.fetchData()
+
+            return { heroStore }
         }
     }
 </script>
 
 <template>
-<div>Hejsan hoppsan {{ heroStore.heroes + filter }}</div>
+<ul v-for="hero in heroStore.heroes" class="text-center text-h4" :key="hero.id">
+  <li>{{ hero.name }}</li>
+</ul>
 </template>
 
 <style scoped>

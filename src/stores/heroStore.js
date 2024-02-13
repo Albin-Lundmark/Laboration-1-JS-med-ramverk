@@ -3,18 +3,13 @@ import axios from 'axios'
 
 export const useHeroStore = defineStore('heroStore', {
   state: () => ({
-    heroes: null
+    heroes: []
   }),
   actions: {
     async fetchData() {
-      /* const res = await fetch('https://avancera.app/cities')
-      const data = await res.json()
-      this.data = data
-      console.log(this.data) */
       try {
-        const response = await axios.get('https://superheroapi.com/api/10161598990293033/1')
-        this.heroes = response
-        console.log(this.response, 'Hejsan');
+        const response = await axios.get('heroes.json')
+        this.heroes = response.data
         console.log(this.heroes)
       } catch (error) {
         console.error('Allt har gått åt pipsvängen! :', error)
