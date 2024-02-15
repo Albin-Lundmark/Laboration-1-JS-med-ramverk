@@ -13,7 +13,7 @@ import { useHeroStore } from '../stores/heroStore'
 </script>
 
 <template>
-<ul v-for="hero in heroStore.heroes" class="text-center text-h4" :key="hero.id">
+<ul v-for="hero in heroStore.heroes" :key="hero.id" class="text-center text-h4">
   <li>{{ hero.name }}</li>
 </ul>
 </template>
