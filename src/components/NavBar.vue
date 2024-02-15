@@ -43,7 +43,6 @@ export default {
 #menu-btn{
   z-index: 2;
   position: absolute;
-  width: ;
   top: 3svh;
   left: 50%;
   transform: translate(-50%);
