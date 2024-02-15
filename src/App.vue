@@ -17,4 +17,8 @@ import FooterNav from './components/FooterNav.vue'
 </template>
 
 <style scoped>
+#app > div > div > footer {
+  margin: 0;
+  padding: 0;
+}
 </style>

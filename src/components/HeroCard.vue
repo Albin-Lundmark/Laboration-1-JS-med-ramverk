@@ -18,7 +18,7 @@ import { useHeroStore } from '../stores/heroStore'
   <v-card>
     <v-data-iterator
       :items="heroes"
-      :items-per-page="3"
+      :items-per-page="5"
       :search="search"
     >
       <template v-slot:header>
@@ -28,7 +28,7 @@ import { useHeroStore } from '../stores/heroStore'
             clearable
             density="comfortable"
             hide-details
-            placeholder="Search"
+            placeholder="Search .."
             prepend-inner-icon="mdi-magnify"
             style="max-width: 400px;"
             variant="solo"
@@ -46,11 +46,11 @@ import { useHeroStore } from '../stores/heroStore'
               md="4"
             >
               <v-card class="pb-3" border flat>
-                <v-img :src="item.image.url"></v-img>
+                <v-img :src="hero.image.url"></v-img>
 
-                <v-list-item class="mb-2" :biography="item.biography">
+                <v-list-item class="mb-2" :biography="hero.biography">
                   <template v-slot:name>
-                    <strong class="text-h6 mb-2">{{ item.name }}</strong>
+                    <strong class="text-h6 mb-2">{{ hero.name }}</strong>
                   </template>
                 </v-list-item>
 

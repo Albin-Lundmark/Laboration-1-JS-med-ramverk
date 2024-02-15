@@ -6,7 +6,7 @@
   <v-card>
     <v-layout>
       <v-navigation-drawer v-model="drawer" temporary>
-        <v-list-item prepend-avatar="https://randomuser.me/api/portraits/men/78.jpg" title="Superheroes"></v-list-item>
+        <v-list-item prepend-avatar="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/38/38abc254c642690d83ca2e872b031166b98bd92e.jpg" title="Superheroes"></v-list-item>
 
         <v-divider></v-divider>
 
@@ -15,7 +15,7 @@
           <v-list-item prepend-icon="mdi-cake" value="Heroes"><router-link to="/heroinfo">Heroes</router-link></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 250px">
+      <v-main style="height: 45svh">
         <div class="d-flex h-100">
           <v-btn id="menu-btn" color="blue" @click.stop="drawer = !drawer">
             Menu
@@ -34,7 +34,7 @@ export default {
     return {
       drawer: null,
     }
-  },
+  }
 }
 </script>
 
