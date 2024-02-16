@@ -8,8 +8,7 @@ import { useHeroStore } from '../stores/heroStore'
         return { heroStore }
       },
     data: () => ({
-      search: '',
-      heroes: []
+      search: ''
     })
   }
 </script>
@@ -17,12 +16,12 @@ import { useHeroStore } from '../stores/heroStore'
 <template>
   <v-card>
     <v-data-iterator
-      :items="heroes"
-      :items-per-page="5"
+      :items="heroStore.heroes"
+      :items-per-page="3"
       :search="search"
     >
       <template v-slot:header>
-        <v-toolbar class="px-2">
+        <v-toolbar class="px-4">
           <v-text-field
             v-model="search"
             clearable
@@ -36,30 +35,31 @@ import { useHeroStore } from '../stores/heroStore'
         </v-toolbar>
       </template>
 
-      <template v-slot:default="{ heroStore }">
+      <template v-slot:default="{ items }">
         <v-container class="pa-2" fluid>
           <v-row dense>
             <v-col
-              v-for="hero in heroStore.heroes"
-              :key="hero.name"
+              v-for="item in items"
+              :key="item.name"
               cols="auto"
               md="4"
             >
               <v-card class="pb-3" border flat>
-                <v-img :src="hero.image.url"></v-img>
+                <v-img :src="item.raw.image.url"></v-img>
 
-                <v-list-item class="mb-2" :biography="hero.biography">
+                <v-list-item class="mb-2" :name="item.raw.name">
                   <template v-slot:name>
-                    <strong class="text-h6 mb-2">{{ hero.name }}</strong>
+                    <strong class="text-h6 mb-2">{{ item.raw.name }}</strong>
                   </template>
                 </v-list-item>
 
-                <div class="d-flex justify-space-between px-4">
-                  <div class="d-flex align-center text-caption text-medium-emphasis me-1">
-                    <v-icon icon="mdi-clock" start></v-icon>
 
-                    <div class="text-truncate">{{ item.raw.duration }}</div>
-                  </div>
+                <div class="d-flex justify-space-between px-4">
+                    <div class="d-flex align-center text-caption text-medium-emphasis me-1">
+                      <v-icon icon="mdi-star" start></v-icon>
+
+                      <div class="text-truncate">{{ item.name }}</div>
+                    </div>
 
                   <v-btn
                     border
