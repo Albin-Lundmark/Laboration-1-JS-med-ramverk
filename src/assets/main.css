@@ -7,6 +7,12 @@
 }
 
 #app {
-  width: 100svw;
+  width: 100%;
   font-weight: normal;
+}
+
+@media screen and (max-width: 640px) {
+  #app {
+    width: 100svw;
+  }
 }

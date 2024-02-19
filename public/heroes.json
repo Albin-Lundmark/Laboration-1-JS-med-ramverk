@@ -597,20 +597,20 @@
 				"Chuck"
 			],
 			"placeOfBirth": "Ryan, Oklahoma, United States",
-			"firstAppearance": "-",
-			"publisher": "null",
+			"firstAppearance": "The Wrecking Crew",
+			"publisher": "Tyndale House Publishers",
 			"alignment": "good"
 		},
 		"appearance": {
 			"gender": "Male",
-			"race": "null",
+			"race": "Human",
 			"height": [
 				"5'10",
 				"178 cm"
 			],
 			"weight": [
-				"- lb",
-				"0 kg"
+				"145 lb",
+				"66 kg"
 			],
 			"eyeColor": "-",
 			"hairColor": "-"

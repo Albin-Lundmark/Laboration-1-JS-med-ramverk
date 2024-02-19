@@ -24,27 +24,27 @@ export default {
       </template>
 
       <template v-slot:default="{ items }">
-        <v-container class="pa-2" fluid>
+        <v-container id="container" class="pa-2 fill-height" fluid>
           <v-row dense>
             <v-col v-for="item in items" :key="item.name" cols="auto" md="4">
-              <v-card class="pb-3" border flat>
-                <v-img :src="item.raw.image.url"></v-img>
+              <v-card class="pb-3 mx-5" border elevated>
+                <v-img :src="item.raw.image.url" cover max-height="400"></v-img>
 
-                <v-list-item class="mb-2" :subtitle="item.raw.biography.publisher">
+                <v-list-item class="mb-2 px-5" :subtitle="'Publisher: ' + item.raw.biography.publisher">
                   <template v-slot:title>
                     <strong class="text-h6 mb-2">{{ item.raw.name }}</strong>
                   </template>
                 </v-list-item>
 
-
                 <div class="d-flex justify-space-between px-4">
                   <div class="d-flex align-center text-caption text-medium-emphasis me-1">
                     <v-icon icon="mdi-star" start></v-icon>
 
-                    <div class="text-truncate">{{ item.raw.biography.firstAppearance }}</div>
+                    <div class="text-truncate">First appeareance: {{ item.raw.biography.firstAppearance }}
+                    </div>
                   </div>
 
-                  <v-btn border flat size="small" class="text-none" text="Read">
+                  <v-btn border elevated size="small" class="text-none px-1" text="Read more"><router-link to="/herocardinfo"></router-link>
                   </v-btn>
                 </div>
               </v-card>
@@ -74,5 +74,12 @@ export default {
 * {
   margin: 0;
   padding: 0;
+}
+template {
+  display: flex;
+}
+#container {
+  justify-content: center;
+  align-items: center;
 }
 </style>

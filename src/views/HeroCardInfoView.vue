@@ -13,11 +13,7 @@ export default {
 </script>
 
 <template>
-    <h2 class="text-center">A list of all the heroes on our website</h2>
-    <v-divider></v-divider>
-    <ul v-for="hero in heroStore.heroes" :key="hero.id" class="text-center text-h5">
-        <li>{{ hero.name }}</li>
-    </ul>
+    <div></div>
 </template>
 
 <style scoped>

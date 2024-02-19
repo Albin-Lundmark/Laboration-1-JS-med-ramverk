@@ -12,7 +12,14 @@ const router = createRouter({
     {
       path: '/heroinfo',
       name: 'heroinfo',
+      /* Enligt vad jag läst mig till så gör sättet som jag importerar komponenten på nedan att
+      komponenten gör en lazy load istället för att importera den som jag importerat HomeView */
       component: () => import('../views/HeroInfoView.vue')
+    },
+    {
+      path: '/:hero',
+      name: 'herocardinfo',
+      component: () => import('../views/HeroCardInfoView.vue')
     }
   ]
 })
