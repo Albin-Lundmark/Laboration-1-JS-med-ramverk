@@ -12,12 +12,18 @@ import FooterNav from './components/FooterNav.vue'
     <main>
       <RouterView />
     </main>
+    <footer>
       <FooterNav />
+    </footer>
   </v-app>
 </template>
 
 <style scoped>
 #app > div > div > footer {
+  margin: 0;
+  padding: 0;
+}
+footer{
   margin: 0;
   padding: 0;
 }

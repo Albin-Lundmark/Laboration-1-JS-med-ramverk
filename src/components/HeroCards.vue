@@ -24,11 +24,11 @@ export default {
       </template>
 
       <template v-slot:default="{ items }">
-        <v-container id="container" class="pa-2 fill-height" fluid>
+        <v-container class="pa-2 fill-height" fluid>
           <v-row dense>
             <v-col v-for="item in items" :key="item.name" cols="auto" md="4">
               <v-card class="pb-3 mx-5" border elevated>
-                <v-img :src="item.raw.image.url" cover max-height="400"></v-img>
+                <v-img :src="item.raw.image.url" cover max-height="450"></v-img>
 
                 <v-list-item class="mb-2 px-5" :subtitle="'Publisher: ' + item.raw.biography.publisher">
                   <template v-slot:title>
@@ -44,7 +44,7 @@ export default {
                     </div>
                   </div>
 
-                  <v-btn border elevated size="small" class="text-none px-1" text="Read more"><router-link to="/herocardinfo"></router-link>
+                  <v-btn border elevated size="small" class="text-none px-1"><router-link to="/herocardinfo">Read more</router-link>
                   </v-btn>
                 </div>
               </v-card>
@@ -74,12 +74,5 @@ export default {
 * {
   margin: 0;
   padding: 0;
-}
-template {
-  display: flex;
-}
-#container {
-  justify-content: center;
-  align-items: center;
 }
 </style>

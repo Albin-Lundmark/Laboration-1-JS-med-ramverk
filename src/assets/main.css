@@ -11,8 +11,17 @@
   font-weight: normal;
 }
 
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 640px) {
   #app {
     width: 100svw;
+  }
+
+  footer {
+    max-height: min-content;
   }
 }
