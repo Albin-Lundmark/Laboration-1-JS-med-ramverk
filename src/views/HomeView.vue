@@ -23,10 +23,14 @@ export default {
 
     <p class="text-center mx-4">Join us at Heroes Unveiled, where legends come to life with each click.
     </p>
-    <!-- <ul v-for="hero in heroStore.heroes" :key="hero.id" class="text-center text-h5">
+    <ul v-for="hero in heroStore.heroes" :key="hero.id" class="text-center text-h5 two-column-list">
         <li>{{ hero.name }}</li>
-    </ul> -->
+    </ul>
 </template>
 
 <style scoped>
+.two-column-list {
+    column-count: 2;
+    column-gap: 1rem;
+}
 </style>
