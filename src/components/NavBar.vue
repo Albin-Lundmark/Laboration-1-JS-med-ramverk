@@ -15,7 +15,7 @@
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
-  <v-main style="height: 50svh">
+  <v-main style="height: 60svh">
     <div class="d-flex h-100">
       <v-btn id="menu-btn" color="blue" @click.stop="drawer = !drawer">
         Menu

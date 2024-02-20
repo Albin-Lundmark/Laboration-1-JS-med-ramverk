@@ -11,9 +11,12 @@ export default {
     }
 }
 </script>
+<script setup>
+import HeroInfo from '../components/HeroInfo.vue';
+</script>
 
 <template>
-    <div></div>
+    <HeroInfo />
 </template>
 
 <style scoped>
