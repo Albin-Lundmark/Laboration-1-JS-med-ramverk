@@ -1,14 +1,9 @@
 <script setup>
-import HeroCard from '../components/HeroCard.vue'
-/* import { useHeroStore } from '../stores/heroStore'
-
-    const heroStore = useHeroStore()
-    heroStore.fetchData()
- */
+import HeroCards from '../components/HeroCards.vue'
 </script>
 
 <template>
-  <HeroCard v-if="HeroCard !== null" />
+  <HeroCards v-if="HeroCards !== null" />
   <h2 v-else>Något har gått fel med laddningen av superhjältar..</h2>
 </template>
 

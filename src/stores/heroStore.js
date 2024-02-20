@@ -10,7 +10,7 @@ export const useHeroStore = defineStore('heroStore', {
       try {
         const response = await axios.get('heroes.json')
         this.heroes = response.data
-        console.log(this.heroes)
+        /* console.log(this.heroes) */
       } catch (error) {
         console.error('Allt har gått åt pipsvängen! :', error)
       }
